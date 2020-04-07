@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BadLuckFriday {
-    LocalDate startDate = LocalDate.of(1900, 1, 1);
-    LocalDate endDate = LocalDate.of(1999, 12, 31);
+    LocalDate startDate = LocalDate.of(1901, 1, 1);
+    LocalDate endDate = LocalDate.of(2000, 12, 31);
 
-    public static List<LocalDate> getDateRangeJava9(LocalDate startDate, LocalDate endDate) {
+    public static List<LocalDate> getFridays13thIn20thCentury(LocalDate startDate, LocalDate endDate) {
         return startDate.datesUntil(endDate)
                 .filter(date -> date.getDayOfMonth() == 13)
                 .filter(date -> date.getDayOfWeek() == DayOfWeek.FRIDAY)
